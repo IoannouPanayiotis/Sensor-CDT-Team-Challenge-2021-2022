@@ -13,8 +13,10 @@ def main(epochs, dataset_directory):
     import tensorflow as tf
     from PIL import Image
     import numpy as np
+    import ssl
     import os
 
+    ssl._create_default_https_context = ssl._create_unverified_context
     tf.get_logger().setLevel('ERROR')
 
     from absl import logging
